@@ -1,6 +1,6 @@
 const data = [
     {
-      "title": "Work",
+      "title": "Work ...",
       "timeframes": {
         "daily": {
           "current": 5,
@@ -17,7 +17,7 @@ const data = [
       }
     },
     {
-      "title": "Play",
+      "title": "Play ...",
       "timeframes": {
         "daily": {
           "current": 1,
@@ -34,7 +34,7 @@ const data = [
       }
     },
     {
-      "title": "Study",
+      "title": "Study ...",
       "timeframes": {
         "daily": {
           "current": 0,
@@ -51,7 +51,7 @@ const data = [
       }
     },
     {
-      "title": "Exercise",
+      "title": "Exercise ...",
       "timeframes": {
         "daily": {
           "current": 1,
@@ -68,7 +68,7 @@ const data = [
       }
     },
     {
-      "title": "Social",
+      "title": "Social  ...",
       "timeframes": {
         "daily": {
           "current": 1,
@@ -85,7 +85,8 @@ const data = [
       }
     },
     {
-      "title": "Self Care",
+      "img": "./IMG/icon-play.svg",
+      "title": "Self Care ...",
       "timeframes": {
         "daily": {
           "current": 0,
@@ -127,21 +128,33 @@ const data = [
     data.forEach((item) => {
       const title = item.title;
       const info = item.timeframes[timeframe];
-      const card = document.createElement('div')
-      card.className = 'card'
-      card.innerHTML = `
-        <div>
-         <p>${title}</p>
-       </div>
-        <div>
-          <h1>${info.current}</h1>
-        </div>
-        <div>
-          <p>${getName(timeframe)} - ${info.previous}</p>
-        </div>
+
+      const topCard = document.createElement('div')
+      topCard.className = 'card'
+      topCard.innerHTML = `
+        
+      <div class="top-card">
+        <img class="img" src="./IMG/icon-play.svg" alt="">
+      </div>
+        
       `
 
-      cards.appendChild(card)
+      
+      const card = document.createElement('div')
+      card.className = 'card-content'
+      card.innerHTML = `
+        <div>
+         <h2>${title}</h2>
+       </div>
+        <div>
+          <h1>${info.current}Hrs</h1>
+        </div>
+        <div>
+          <p>${getName(timeframe)} - ${info.previous}Hrs</p>
+        </div>
+      `
+      topCard.appendChild(card)
+      cards.appendChild(topCard)
 
     })
   }

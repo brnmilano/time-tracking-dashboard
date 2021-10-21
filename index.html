@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
   <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,16 @@
 </head>
 <body>
   <div class="main-container">
-    <div class="">
-      <div>
-        <button onclick="renderCards('daily')"></button>
-        <button onclick="renderCards('weekly')"></button>
-        <button onclick="renderCards('monthly')"></button>
+    <div class="teste">
+      <div class="buttons-container">
+        <div class="container-img">
+          <img class="jeremy" src="./IMG/img-jeremy.png" alt="">
+          <p>Report for</p>
+          <h1>Jeremy Robson</h1>
+        </div>
+        <button class="buttons" onclick="renderCards('daily')">Daily</button>
+        <button class="buttons" onclick="renderCards('weekly')">Weekly</button>
+        <button class="buttons" onclick="renderCards('monthly')">Monthly</button>
       </div>
       <div id="cards-container">
       </div>
