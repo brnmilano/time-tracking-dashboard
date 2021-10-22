@@ -16,6 +16,7 @@
   --study: hsl(348, 100%, 68%);
   --exercise: hsl(145, 58%, 55%);
   --social: hsl(264, 64%, 52%);
+  --selfcare: hsl(43, 84%, 65%);
   --bg: hsl(226, 43%, 10%);
   --darkblue: hsl(235, 46%, 20%);
   --desaturatedblue: hsl(235, 45%, 61%);
@@ -96,6 +97,8 @@ body {
 .card {
   background-color: hsl(195, 74%, 62%);
   border-radius: 10px;
+  position: relative;
+  overflow: hidden;
 }
 
 .card h1 {
@@ -103,24 +106,61 @@ body {
   font-size: 50px;
 }
 
+.card.work {
+  background-color: var(--work);
+}
+
+.card.play {
+  background-color: var(--play);
+}
+
+.card.study {
+  background-color: var(--study);
+}
+
+.card.exercise {
+  background-color: var(--exercise);
+}
+
+.card.social {
+  background-color: var(--social);
+}
+
+.card.selfcare {
+  background-color: var(--selfcare);
+}
+
 .top-card {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  position: relative;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-radius: 5px;
 }
 
 .img {
-  height: 35px;
+  height: 65px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 10px;
+  margin-top: -5px;
+  z-index: 10;
 }
 
 .card-content {
   padding: 20px;
   background-color: hsl(235, 46%, 20%);
   color: white;
-  border-radius: 8px;
+  border-radius: 15px 15px 5px 5px;
   height: 180px;
   width: 220px;
   line-height: 40px;
+  margin-top: 35px;
+  z-index: 50;
+  position: relative;
 }
 
 .card-content h2 {

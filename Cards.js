@@ -1,5 +1,7 @@
 const data = [
     {
+      "background": "work",
+      "img": "./IMG/icon-work.svg",
       "title": "Work ...",
       "timeframes": {
         "daily": {
@@ -17,6 +19,8 @@ const data = [
       }
     },
     {
+      "background": "play",
+      "img": "./IMG/icon-play.svg",
       "title": "Play ...",
       "timeframes": {
         "daily": {
@@ -34,6 +38,8 @@ const data = [
       }
     },
     {
+      "background": "study",
+      "img": "./IMG/icon-study.svg",
       "title": "Study ...",
       "timeframes": {
         "daily": {
@@ -51,6 +57,8 @@ const data = [
       }
     },
     {
+      "background": "exercise",
+      "img": "./IMG/icon-exercise.svg",
       "title": "Exercise ...",
       "timeframes": {
         "daily": {
@@ -68,6 +76,8 @@ const data = [
       }
     },
     {
+      "background": "social",
+      "img": "./IMG/icon-social.svg",
       "title": "Social  ...",
       "timeframes": {
         "daily": {
@@ -85,7 +95,8 @@ const data = [
       }
     },
     {
-      "img": "./IMG/icon-play.svg",
+      "background": "selfcare",
+      "img": "./IMG/icon-self-care.svg",
       "title": "Self Care ...",
       "timeframes": {
         "daily": {
@@ -130,12 +141,10 @@ const data = [
       const info = item.timeframes[timeframe];
 
       const topCard = document.createElement('div')
-      topCard.className = 'card'
+      topCard.className = `card ${item.background}`
       topCard.innerHTML = `
         
-      <div class="top-card">
-        <img class="img" src="./IMG/icon-play.svg" alt="">
-      </div>
+        <img class="img" src="${item.img}" alt="">
         
       `
 
@@ -145,6 +154,7 @@ const data = [
       card.innerHTML = `
         <div>
          <h2>${title}</h2>
+
        </div>
         <div>
           <h1>${info.current}Hrs</h1>
